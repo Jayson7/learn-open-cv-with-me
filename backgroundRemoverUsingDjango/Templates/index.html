@@ -15,21 +15,35 @@
     <h1>Much more than a background remover</h1>
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-     <div class="form-group">
-      <input type="file" name="image" required />
-      <div class="class="form-text">terms and comditions</div>
+     <div class="form-group row ">
+      <input type="file" class="col-12 mb-2" name="image" required />
+      <div class="class="form-text col-6 mt-4 " style="color:blue">Terms and comditions</div>
       </div>
       <button class="btn btn-primary py-2 col-12" type="submit">Upload</button>
     </form>
     {% if uploaded_file_url %}
-    <h2>Uploaded Image:</h2>
-    <img src="{{ uploaded_file_url }}" alt="Uploaded Image" />
-    <h2>Processed Image:</h2>
-    <img src="{{ processed_image_url }}" alt="Processed Image" />
-    <h2>greyscale Image:</h2>
-    <img src="{{ greyscale_url }}" alt="Processed Image" />
-    <h2>bg removed Image:</h2>
-    <img src="{{ bg_removed_url }}" alt="Processed Image" />
+   <div class="image-tentions">
+<div class="tention1">
+
+  <h2>Uploaded Image:</h2>
+  <img src="{{ uploaded_file_url }}" alt="Uploaded Image" />
+</div>
+<div class="tention2">
+
+  <h2>Processed Image:</h2>
+  <img src="{{ processed_image_url }}" alt="Processed Image" />
+</div>  
+<div class="tention3">
+
+  <h2>greyscale Image:</h2>
+  <img src="{{ greyscale_url }}" alt="Processed Image" />
+</div>  
+<div class="tension4">
+
+  <h2>bg removed Image:</h2>
+  <img src="{{ bg_removed_url }}" alt="Processed Image" />
+</div>  
     {% endif %}
+  </div>
   </body>
 </html>
