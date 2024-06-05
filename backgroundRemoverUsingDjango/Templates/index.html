@@ -15,33 +15,52 @@
     <h1>Much more than a background remover</h1>
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-     <div class="form-group row ">
-      <input type="file" class="col-12 mb-2" name="image" required />
-      <div class="class="form-text col-6 mt-4 " style="color:blue">Terms and comditions</div>
+     <div class="form-group row mb-3">
+       <label for="formFile" class="form-label">Upload picture </label>
+      <input type="file" class="col-12 mb-2 form-control" name="image" required />
+      <div class="class="form-text col-6 mt-4" style="color:blue">Terms and comditions apply</div>
       </div>
+   
       <button class="btn btn-primary py-2 col-12" type="submit">Upload</button>
     </form>
     {% if uploaded_file_url %}
-   <div class="image-tentions">
-<div class="tention1">
+   <div class="image-tentions container">
+  <div class="row">
+<div class="tention1 col">
 
   <h2>Uploaded Image:</h2>
-  <img src="{{ uploaded_file_url }}" alt="Uploaded Image" />
+  
+  <div class="card" style="width: 18rem;">
+  <img src="{{ uploaded_file_url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
 </div>
-<div class="tention2">
+</div>
 
-  <h2>Processed Image:</h2>
-  <img src="{{ processed_image_url }}" alt="Processed Image" />
-</div>  
-<div class="tention3">
+
+  <!--  -->
+<div class="tention2 col">
 
   <h2>greyscale Image:</h2>
-  <img src="{{ greyscale_url }}" alt="Processed Image" />
+  
+   <div class="card" style="width: 18rem;">
+    <img src="{{ greyscale_url }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
 </div>  
-<div class="tension4">
+<div class="tension3 col">
 
   <h2>bg removed Image:</h2>
-  <img src="{{ bg_removed_url }}" alt="Processed Image" />
+ 
+  <div class="card" style="width: 18rem;">
+    <img src="{{ bg_removed_url }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div></div>
 </div>  
     {% endif %}
   </div>
