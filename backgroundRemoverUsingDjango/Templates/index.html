@@ -33,7 +33,7 @@
   <div class="card" style="width: 18rem;">
   <img src="{{ uploaded_file_url }}" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><button class="btn btn-success py-1 px-4">Download</button></p>
+    <p class="card-text"><button download="{% url '{{uploaded_file_url}}' %}" class="btn btn-success py-1 px-4">Download</button></p>
   </div>
 </div>
 </div>
@@ -47,7 +47,7 @@
    <div class="card" style="width: 18rem;">
     <img src="{{ greyscale_url }}" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text"><button class="btn btn-success py-1 px-4">Download</button></p>
+      <p class="card-text"><button download="{% url '{{greyscale_url}}' %}" class="btn btn-success py-1 px-4">Download</button></p>
     </div>
   </div>
 </div>  
@@ -58,7 +58,7 @@
   <div class="card" style="width: 18rem;">
     <img src="{{ bg_removed_url }}" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text"><button class="btn btn-success py-1 px-4">Download</button></p>
+      <p class="card-text"><button download="{% url '{{bg_removed_url}}' %}" class="btn btn-success py-1 px-4">Download</button></p>
     </div>
   </div></div>
 </div>  
